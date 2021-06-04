@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    button{
+      text-align: center;
+      width: 80px;
+      height: 10opx;
+    }
+    input{
+      width: 430px;
+    }
+    div div{
+      display: inline-block;
+      
+      width:60px;
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-top: 3px;
+      margin-bottom: 3px;
+    }
+  
+  </style>
+  <script>
+    function show(n){
+      var display=document.getElementById('show');
+      display.value+=n;
+    }
+    function reset(){
+      var display=document.getElementById('show');
+      display.value="";
+    }
+    function result(){
+      var display=document.getElementById('show');
+      var result=eval(display.value);
+      display.value=result;
+
+    }
+    function back(){
+      var display=document.getElementById('show');
+      display.value=display.value.substring(0,display.value.length-1);
+    }
+
+
+  </script>
+  <title>계산기 만들기</title>
+</head>
+<body>
+  <h1>계산기 만들기</h1>
+  <hr>
+  <form>
+    <input id='show' type='text'>
+  </form>
+  <div>
+    <div><button onclick="back()">BACK</button></div>
+    <div><button onclick="reset()">CE</button></div>
+    <div><button onclick="reset()">C</button></div>
+    <div><button onclick="result()">=</button></div>
+  </div>
+  <div>
+    <div><button onclick="show(7)">7</button></div>
+    <div><button onclick="show(8)"onclick="show()">8</button></div>
+    <div><button onclick="show(9)">9</button></div>
+    <div><button onclick="show('/')">/</button></div>
+  </div>
+  <div>
+    <div><button onclick="show(4)">4</button></div>
+    <div><button onclick="show(5)">5</button></div>
+    <div><button onclick="show(6)">6</button></div>
+    <div><button onclick="show('*')">*</button></div>
+  </div>
+  <div>
+    <div><button onclick="show(1)">1</button></div>
+    <div><button onclick="show(2)">2</button></div>
+    <div><button onclick="show(3)">3</button></div>
+    <div><button onclick="show('-')">-</button></div>
+  </div>
+  <div>
+    <div><button onclick="show(0)">0</button></div>
+    <div><button onclick="show('+')">+</button></div>
+    <div><button>NONE</button></div>
+    <div><button>NONE</button></div>
+  </div>
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
